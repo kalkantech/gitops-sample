@@ -4,7 +4,7 @@
 
 # Common controls
 environment: dev
-application: demo-app
+application: demo-spring
 namespace: "test-apps"
 # Deployment controls
 nodeSelector: {}
@@ -12,7 +12,7 @@ tolerations: []
 affinity: {}
 replicaCount: 2
 restartPolicy: Always
-containerName: demo-app
+containerName: demo-spring
 containerPort: 8080
 containerPort2: 9080
 image:
