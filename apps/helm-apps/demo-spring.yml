@@ -14,6 +14,7 @@ spec:
     path: values/demo-spring
   syncPolicy:
     automated:
+      allowEmpty: true
       prune: true
       selfHeal: true
   project: default
