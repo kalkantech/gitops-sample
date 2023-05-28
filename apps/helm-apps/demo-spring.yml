@@ -12,9 +12,5 @@ spec:
     targetRevision: HEAD
     repoURL: https://github.com/kalkantech/gitops-sample.git
     path: values/demo-spring
-  syncPolicy:
-    automated:
-      allowEmpty: true
-      prune: true
-      selfHeal: true
+  syncPolicy: {}
   project: default
