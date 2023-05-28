@@ -7,7 +7,7 @@ spec:
   destination:
     # name: in-cluster
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: test-apps
   source:
     targetRevision: HEAD
     repoURL: https://github.com/kalkantech/gitops-sample.git
