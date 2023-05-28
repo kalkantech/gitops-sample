@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: test-apps
+    namespace: argocd
   source:
     targetRevision: HEAD
     repoURL: https://github.com/kalkantech/gitops-sample.git
