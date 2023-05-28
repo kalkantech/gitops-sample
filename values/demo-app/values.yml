@@ -1,0 +1,66 @@
+# Default values for finance-moneytransfer-core.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Common controls
+environment: dev
+application: demo-app
+namespace: "test-apps"
+# Deployment controls
+nodeSelector: {}
+tolerations: []
+affinity: {}
+replicaCount: 2
+restartPolicy: Always
+containerName: demo-app
+containerPort: 8080
+containerPort2: 9080
+image:
+  pullPolicy: Always
+  repository: shield07/demo
+  tag: 0.0.1
+# readinessProbe:
+#   httpGet:
+#     path: /actuator/health/readiness
+#     port: 9080
+#     scheme: HTTP
+#   initialDelaySeconds: 30
+#   timeoutSeconds: 5
+#   periodSeconds: 10
+#   successThreshold: 1
+#   failureThreshold: 10
+# livenessProbe:
+#   httpGet:
+#     path: /actuator/health/liveness
+#     port: 9080
+#     scheme: HTTP
+#   initialDelaySeconds: 60
+#   timeoutSeconds: 5
+#   periodSeconds: 10
+#   successThreshold: 1
+#   failureThreshold: 10
+resources:
+  requests:
+    cpu: 200m
+    memory: 1000Mi
+  limits:
+    cpu: 800m
+    memory: 1500Mi
+# hpa controls
+hpa:
+  enabled: true
+  averageUtilization:
+    memory: 95
+    cpu: 95
+  minReplicas: 1
+  maxReplicas: 2
+# Service controls
+service:
+  port: 8080
+  port2: 9080
+  type: NodePort
+# configmap and secrets
+envVar:
+  configmap:
+    KAFKA_CFG: "test"
+  secret: true

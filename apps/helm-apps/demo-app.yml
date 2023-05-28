@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-apps
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: test-apps
+  source:
+    targetRevision: HEAD
+    repoURL: https://github.com/kalkantech/gitops-sample.git
+    path: values/demo-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  project: default
