@@ -1,6 +1,6 @@
 {{- if .Values.hpa.enabled }}
 kind: HorizontalPodAutoscaler
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 metadata:
   name: {{ .Values.application }}-hpa
   namespace: {{ .Release.Namespace }}
