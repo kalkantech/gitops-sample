@@ -10,7 +10,7 @@ namespace: "test-apps"
 nodeSelector: {}
 tolerations: []
 affinity: {}
-replicaCount: 2
+replicaCount: 0
 restartPolicy: Always
 containerName: demo-spring
 containerPort: 8080
