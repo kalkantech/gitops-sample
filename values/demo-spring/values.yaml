@@ -14,7 +14,6 @@ replicaCount: 2
 restartPolicy: Always
 containerName: demo-spring
 containerPort: 8080
-containerPort2: 9080
 image:
   pullPolicy: Always
   repository: shield07/demo
@@ -57,7 +56,6 @@ hpa:
 # Service controls
 service:
   port: 8080
-  port2: 9080
   type: NodePort
 # configmap and secrets
 envVar:

@@ -11,10 +11,6 @@ spec:
     port: {{ .Values.service.port }}
     targetPort: {{ .Values.containerPort }}
     protocol: TCP
-  - name: {{ .Values.service.port2 }}-tcp
-    port: {{ .Values.service.port2}}
-    targetPort: {{ .Values.containerPort2 }}
-    protocol: TCP
   selector:
     app: {{ .Values.application }}
   type: {{ .Values.service.type }}
