@@ -63,4 +63,4 @@ service:
 envVar:
   configmap:
     KAFKA_CFG: "test"
-  secret: true
+  secret: false
