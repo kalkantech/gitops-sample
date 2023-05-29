@@ -18,7 +18,7 @@ containerPort2: 9080
 image:
   pullPolicy: Always
   repository: shield07/demo
-  tag: 0.0.2
+  tag: 0.0.3
 # readinessProbe:
 #   httpGet:
 #     path: /actuator/health/readiness
